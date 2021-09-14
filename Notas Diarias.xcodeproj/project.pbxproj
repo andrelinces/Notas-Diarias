@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		D31D7E7126EFF8E200D83D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7E7026EFF8E200D83D71 /* AppDelegate.swift */; };
 		D31D7E7326EFF8E200D83D71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7E7226EFF8E200D83D71 /* SceneDelegate.swift */; };
-		D31D7E7526EFF8E200D83D71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7E7426EFF8E200D83D71 /* ViewController.swift */; };
 		D31D7E7826EFF8E200D83D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31D7E7626EFF8E200D83D71 /* Main.storyboard */; };
 		D31D7E7B26EFF8E200D83D71 /* Notas_Diarias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D31D7E7926EFF8E200D83D71 /* Notas_Diarias.xcdatamodeld */; };
 		D31D7E7D26EFF8E200D83D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31D7E7C26EFF8E200D83D71 /* Assets.xcassets */; };
 		D31D7E8026EFF8E200D83D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31D7E7E26EFF8E200D83D71 /* LaunchScreen.storyboard */; };
 		D31D7E8B26EFF8E200D83D71 /* Notas_DiariasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7E8A26EFF8E200D83D71 /* Notas_DiariasTests.swift */; };
 		D31D7E9626EFF8E200D83D71 /* Notas_DiariasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7E9526EFF8E200D83D71 /* Notas_DiariasUITests.swift */; };
+		D31D7EA626F0005B00D83D71 /* ListarAnotacoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7EA526F0005B00D83D71 /* ListarAnotacoesTableViewController.swift */; };
+		D31D7EA826F0017700D83D71 /* AnotacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7EA726F0017700D83D71 /* AnotacaoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 		D31D7E6D26EFF8E200D83D71 /* Notas Diarias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notas Diarias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31D7E7026EFF8E200D83D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D31D7E7226EFF8E200D83D71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D31D7E7426EFF8E200D83D71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D31D7E7726EFF8E200D83D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D31D7E7A26EFF8E200D83D71 /* Notas_Diarias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notas_Diarias.xcdatamodel; sourceTree = "<group>"; };
 		D31D7E7C26EFF8E200D83D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		D31D7E9126EFF8E200D83D71 /* Notas DiariasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notas DiariasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31D7E9526EFF8E200D83D71 /* Notas_DiariasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notas_DiariasUITests.swift; sourceTree = "<group>"; };
 		D31D7E9726EFF8E200D83D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31D7EA526F0005B00D83D71 /* ListarAnotacoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListarAnotacoesTableViewController.swift; sourceTree = "<group>"; };
+		D31D7EA726F0017700D83D71 /* AnotacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotacaoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,8 @@
 			children = (
 				D31D7E7026EFF8E200D83D71 /* AppDelegate.swift */,
 				D31D7E7226EFF8E200D83D71 /* SceneDelegate.swift */,
-				D31D7E7426EFF8E200D83D71 /* ViewController.swift */,
+				D31D7EA526F0005B00D83D71 /* ListarAnotacoesTableViewController.swift */,
+				D31D7EA726F0017700D83D71 /* AnotacaoViewController.swift */,
 				D31D7E7626EFF8E200D83D71 /* Main.storyboard */,
 				D31D7E7C26EFF8E200D83D71 /* Assets.xcassets */,
 				D31D7E7E26EFF8E200D83D71 /* LaunchScreen.storyboard */,
@@ -261,9 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D31D7E7526EFF8E200D83D71 /* ViewController.swift in Sources */,
 				D31D7E7126EFF8E200D83D71 /* AppDelegate.swift in Sources */,
+				D31D7EA826F0017700D83D71 /* AnotacaoViewController.swift in Sources */,
 				D31D7E7326EFF8E200D83D71 /* SceneDelegate.swift in Sources */,
+				D31D7EA626F0005B00D83D71 /* ListarAnotacoesTableViewController.swift in Sources */,
 				D31D7E7B26EFF8E200D83D71 /* Notas_Diarias.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

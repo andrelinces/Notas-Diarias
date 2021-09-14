@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQf-s5-eJw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,18 +11,34 @@
         <!--Notas Diárias-->
         <scene sceneID="oDi-2I-VNH">
             <objects>
-                <tableViewController id="Mig-A1-3En" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mhr-tF-MhA">
+                <tableViewController id="Mig-A1-3En" customClass="ListarAnotacoesTableViewController" customModule="Notas_Diarias" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mhr-tF-MhA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="T6Q-6S-bFU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" textLabel="lYU-kT-Mlg" detailTextLabel="slt-Wa-L70" style="IBUITableViewCellStyleSubtitle" id="T6Q-6S-bFU">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T6Q-6S-bFU" id="Tsp-2L-RGj">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lYU-kT-Mlg">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="slt-Wa-L70">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -35,7 +51,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tkg-qS-MmV">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="PYJ-D6-hCH" kind="show" id="N8y-WP-6di"/>
+                                <segue destination="PYJ-D6-hCH" kind="show" identifier="verAnotacao" id="N8y-WP-6di"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -44,17 +60,16 @@
             </objects>
             <point key="canvasLocation" x="148" y="70"/>
         </scene>
-        <!--View Controller-->
+        <!--Adicionar-->
         <scene sceneID="IY3-7m-UUk">
             <objects>
-                <viewController id="PYJ-D6-hCH" sceneMemberID="viewController">
+                <viewController id="PYJ-D6-hCH" customClass="AnotacaoViewController" customModule="Notas_Diarias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ErV-0f-zkO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-hv-umT">
-                                <rect key="frame" x="20" y="101" width="374" height="746"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-hv-umT">
+                                <rect key="frame" x="15" y="103" width="384" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -64,8 +79,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ob-XQ-RwA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3ob-XQ-RwA" firstAttribute="bottom" secondItem="R8S-hv-umT" secondAttribute="bottom" constant="15" id="Jtw-Sn-mey"/>
+                            <constraint firstItem="R8S-hv-umT" firstAttribute="leading" secondItem="3ob-XQ-RwA" secondAttribute="leading" constant="15" id="LBz-Iq-y0E"/>
+                            <constraint firstItem="R8S-hv-umT" firstAttribute="top" secondItem="3ob-XQ-RwA" secondAttribute="top" constant="15" id="pSx-2M-iZV"/>
+                            <constraint firstItem="3ob-XQ-RwA" firstAttribute="trailing" secondItem="R8S-hv-umT" secondAttribute="trailing" constant="15" id="wvN-Hm-vZo"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="W55-B6-juf"/>
+                    <navigationItem key="navigationItem" title="Adicionar" id="W55-B6-juf">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="2Gv-1p-esr">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="salvar:" destination="PYJ-D6-hCH" id="Ymo-Dj-mOl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="texto" destination="R8S-hv-umT" id="NWb-hz-3bl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEl-vt-BLN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +110,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.72549019609999998" green="0.78823529410000004" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.60784313729999995" green="0.7725490196" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
